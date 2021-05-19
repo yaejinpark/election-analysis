@@ -14,26 +14,22 @@ import os # Useful when I don't know the full path of a file
 
 # print("The time right now is", dt.datetime.now())
 
-# Open the election results file
-# file_path = "resources/election_results.csv"
-file_path = os.path.join("resources", "election_results.csv")
+# Assign a variable to load the election results file
+file_to_load = os.path.join("resources", "election_results.csv")
+# Assign a variable to save the analysis results file
+file_to_save = os.path.join("analysis", "election_analysis.txt")
 # election_data = open(file_path,"r")
 
 # With 'with,' I don't have to keep opening and closing the data file to obtain data I need.
-with open(file_path) as election_data:
-	print(election_data)
+with open(file_to_load) as election_data:
 
 # TODO: Perform analysis on election results
 
-# Close elction file
-election_data.close()
+	# Read the file object with the reader function
+	file_reader = csv.reader(election_data)
 
-# Create a filename variable to a direct or indirect path to the file.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
-# Using the with statement open the file as a text file.
-outfile = open(file_to_save, "w")
-# Write some data to the file.
-outfile.write("Hello World")
+	# Print the headers row
+	headers = next(file_reader)
+	print(headers)
 
-# Close the file
-outfile.close()
+	
