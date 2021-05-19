@@ -15,7 +15,7 @@ import os # Useful when I don't know the full path of a file
 # Assign a variable to load the election results file
 file_to_load = os.path.join("resources", "election_results.csv")
 # Assign a variable to save the analysis results file
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", "election_results.txt")
 
 # 1. Initialize a total vote counter
 total_votes = 0
@@ -61,29 +61,52 @@ with open(file_to_load) as election_data:
 		# Add a vote to that candidate's count.
 		candidate_votes[candidate_name] += 1
 
-# Iterate through the candidates list
-for candidate_name in candidate_votes:
+with open(file_to_save, "w") as txt_file:
+	
+	# Print the final vote count to the terminal.
+	election_results = (
+		f"\nElection Results\n"
+		f"-------------------------\n"
+		f"Total Votes: {total_votes:,}\n"
+		f"-------------------------\n")
+	print(election_results, end="")
 
-	# Retrieve vote count of a candidate
-	votes = candidate_votes[candidate_name]
+	# Save the final vote count to the text file.
+	txt_file.write(election_results)
+	
+	# Iterate through the candidates list
+	for candidate_name in candidate_votes:
 
-	# Calculate the vote percentage
-	vote_percentage = float(votes)/float(total_votes) * 100
+		# Retrieve vote count of a candidate
+		votes = candidate_votes[candidate_name]
 
-	# Determine winning vote count and candidate
-	if (votes > winning_count) and (vote_percentage > winning_percentage):
-		# If true, set the votes as winning count, percentage as winning percentage, and candidate with said two data as winning candidate
-		winning_count = votes
-		winning_percentage = vote_percentage
-		winning_candidate = candidate_name
+		# Calculate the vote percentage
+		vote_percentage = float(votes)/float(total_votes) * 100
 
-	print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+		# Determine winning vote count and candidate
+		if (votes > winning_count) and (vote_percentage > winning_percentage):
+			# If true, set the votes as winning count, percentage as winning percentage, and candidate with said two data as winning candidate
+			winning_count = votes
+			winning_percentage = vote_percentage
+			winning_candidate = candidate_name
 
-# Winning candidate summary
-winning_candidate_summary = (
-    f"-------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}%\n"
-    f"-------------------------\n")
-print(winning_candidate_summary)
+		candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+		print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+		# Save the candidate results to the text file.
+		txt_file.write(candidate_results)
+
+	# Winning candidate summary
+	winning_candidate_summary = (
+	    f"-------------------------\n"
+	    f"Winner: {winning_candidate}\n"
+	    f"Winning Vote Count: {winning_count:,}\n"
+	    f"Winning Percentage: {winning_percentage:.1f}%\n"
+	    f"-------------------------\n")
+	print(winning_candidate_summary)
+
+	# Save winning candidate summary to text file
+	txt_file.write(winning_candidate_summary)
+
+
+
