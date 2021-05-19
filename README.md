@@ -16,6 +16,11 @@ I was able to obtain the desired election results in two forms: output from runn
 As shown in the two images above, the output results are the same content-wise and therefore proves that my analysis Python code worked. 
 
 ## Election Audit Summary
+Though it seemed like a huge task to analyze the results at first, breaking the task down into smaller steps helped me think about how to write the code so that it can perform the analysis on similarly structured election data files. First, none of the candidate names or county names are hardcoded - this code simply extracts them from data rows by storing them inside arrays, without duplicates. Then the code creates a dictionary with said list and keeps a counter for the vote each time the for-loops iterate through a row for each candidate and county with the if-statement that sets the condition of when to count the vote. Here are a couple of examples that prove my case.
+
+### Example 1 - A New Challenger Approaches
+I altered the CSV file's second row so that there is a strange vote for a strange candidate as the following image:
+
 
 
 ## Other Observations
