@@ -16,17 +16,17 @@ I was able to obtain the desired election results in two forms: output from runn
 As shown in the two images above, the output results are the same content-wise and therefore proves that my analysis Python code worked. 
 
 Result Summary:
-- Total votes cast in this election: 369,711\
-- Breakdown of the number of votes and the percentage of total votes for each county in the precinct:
+Total votes cast in this election: 369,711\
+Breakdown of the number of votes and the percentage of total votes for each county in the precinct:
 * Jefferson: 10.5% (38,855)
 * Denver: 82.8% (306,055)
 * Arapahoe: 6.7% (24,801)\
-- County with the largest turnout: Denver\
-- Breakdown of the number of votes and the percentage of the total votes each candidate received:
+County with the largest turnout: Denver\
+Breakdown of the number of votes and the percentage of the total votes each candidate received:
 * Charles Casper Stockham: 23.0% (85,213)
 * Diana DeGette: 73.8% (272,892)
 * Raymon Anthony Doane: 3.1% (11,606)\
-- Winning candidate and their data:
+Winning candidate and their data:
 * Winner: Diana DeGette
 * Winning Vote Count: 272,892
 * Winning Percentage: 73.8%
