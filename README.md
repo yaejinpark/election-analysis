@@ -37,16 +37,16 @@ Though it seemed like a huge task to analyze the results at first, breaking the 
 ### Example 1 - A New Challenger Approaches
 What if I the data had one more candidate? Would the code successfuly register this candidate's data? I altered the CSV file's second row so that there is a strange vote for a strange candidate as the following image:
 
-* ![Strange Candidate](https://github.com/yaejinpark/election-analysis/blob/main/resources/whothis.png)
+![Strange Candidate](https://github.com/yaejinpark/election-analysis/blob/main/resources/whothis.png)
 
 Since I didn't hardcode any names, this candidate should appear in the results when I run the code... and he did (though he only received one vote)!
 
-* ![Strange Result](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex1results.png)
+![Strange Result](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex1results.png)
 
 ### Example 2 - More Candidates, More Votes
-What if example 1 worked just because the new challenger only had one vote? I made more changes to the CSV file so that the new challenger has more votes (repeating voter id indictes election fraud, but let's ignore that for now). This time, the new candidate got a significant amount of votes to alter the percentage of the votes each candidate received.
+What if example 1 worked just because the new challenger only had one vote? I made more changes to the CSV file so that the new challenger has more votes (repeating voter id indictes election fraud, but let's ignore that for now). This time, the new candidate got a significant amount of votes (a whopping 9,999 votes) to alter the percentage of the votes each candidate received. If my code works correctly, the percentage for each candidate should be different from what is shown in the audit results section.
 
+![More Votes](https://github.com/yaejinpark/election-analysis/blob/main/resources/somanyvotes.png)
+![More Votes Results](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex2results.png)
 
-
-## Other Observations
-Naming convention
+So it seems that for any new candidate or how many number of votes for said candidate is recorded, my analysis code is functioning properly. If I could use more modules or a database, maybe I can upgrade the code to take in only unique voter IDs for counting fairly.
