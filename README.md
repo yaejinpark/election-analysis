@@ -44,7 +44,7 @@ Since I didn't hardcode any names, this candidate should appear in the results w
 ![Strange Result](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex1results.png)
 
 ### Example 2 - More Candidates, More Votes
-What if example 1 worked just because the new challenger only had one vote? I made more changes to the CSV file so that the new challenger has more votes (repeating voter id indictes election fraud, but let's ignore that for now). This time, the new candidate got a significant amount of votes (a whopping 9,999 votes) to alter the percentage of the votes each candidate received. If my code works correctly, the percentage for each candidate should be different from what is shown in the audit results section.
+What if example 1 worked just because the new challenger only had one vote? I made more changes to the CSV file so that the new challenger has more votes (repeating voter id indicates election fraud, but let's ignore that for now). This time, the new candidate got a significant amount of votes (a whopping 9,999 votes) to alter the percentage of the votes each candidate received. If my code works correctly, the percentage for each candidate should be different from what is shown in the audit results section.
 
 ![More Votes](https://github.com/yaejinpark/election-analysis/blob/main/resources/somanyvotes.png)
 ![More Votes Results](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex2results.png)
