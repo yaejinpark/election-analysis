@@ -1,23 +1,23 @@
 
 Election Results
 -------------------------
-Total Votes: 369,712
+Total Votes: 379,710
 -------------------------
 
 County Votes:
-Death Star: 0.0% (1)
-Jefferson: 10.5% (38,855)
-Denver: 82.8% (306,055)
-Arapahoe: 6.7% (24,801)
+Death Star: 2.6% (9,999)
+Jefferson: 10.2% (38,855)
+Denver: 80.6% (306,055)
+Arapahoe: 6.5% (24,801)
 -------------------------
 Largest County Turnout: Denver
 -------------------------
-Darth Vader: 0.0% (1)
-Charles Casper Stockham: 23.0% (85,213)
-Diana DeGette: 73.8% (272,892)
+Darth Vader: 2.6% (9,999)
+Charles Casper Stockham: 22.4% (85,213)
+Diana DeGette: 71.9% (272,892)
 Raymon Anthony Doane: 3.1% (11,606)
 -------------------------
 Winner: Diana DeGette
 Winning Vote Count: 272,892
-Winning Percentage: 73.8%
+Winning Percentage: 71.9%
 -------------------------

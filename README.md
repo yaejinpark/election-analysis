@@ -15,11 +15,36 @@ I was able to obtain the desired election results in two forms: output from runn
 
 As shown in the two images above, the output results are the same content-wise and therefore proves that my analysis Python code worked. 
 
+Result Summary:
+- Total votes cast in this election: 369,711\
+- Breakdown of the number of votes and the percentage of total votes for each county in the precinct:
+* Jefferson: 10.5% (38,855)
+* Denver: 82.8% (306,055)
+* Arapahoe: 6.7% (24,801)\
+- County with the largest turnout: Denver\
+- Breakdown of the number of votes and the percentage of the total votes each candidate received:
+* Charles Casper Stockham: 23.0% (85,213)
+* Diana DeGette: 73.8% (272,892)
+* Raymon Anthony Doane: 3.1% (11,606)\
+- Winning candidate and their data:
+* Winner: Diana DeGette
+* Winning Vote Count: 272,892
+* Winning Percentage: 73.8%
+
 ## Election Audit Summary
-Though it seemed like a huge task to analyze the results at first, breaking the task down into smaller steps helped me think about how to write the code so that it can perform the analysis on similarly structured election data files. First, none of the candidate names or county names are hardcoded - this code simply extracts them from data rows by storing them inside arrays, without duplicates. Then the code creates a dictionary with said list and keeps a counter for the vote each time the for-loops iterate through a row for each candidate and county with the if-statement that sets the condition of when to count the vote. Here are a couple of examples that prove my case.
+Though it seemed like a huge task to analyze the results at first, breaking the task down into smaller steps helped me think about how to write the code so that it can perform the same analysis on similarly structured election data files. First, none of the candidate names or county names are hardcoded - this code simply extracts them from data rows by storing them inside arrays, without duplicates. Then the code creates a dictionary with said list and keeps a counter for the vote each time the for-loops iterate through a row for each candidate and county with the if-statement that sets the condition of when to count the vote. Here are a couple of examples that prove my case.
 
 ### Example 1 - A New Challenger Approaches
-I altered the CSV file's second row so that there is a strange vote for a strange candidate as the following image:
+What if I the data had one more candidate? Would the code successfuly register this candidate's data? I altered the CSV file's second row so that there is a strange vote for a strange candidate as the following image:
+
+* ![Strange Candidate](https://github.com/yaejinpark/election-analysis/blob/main/resources/whothis.png)
+
+Since I didn't hardcode any names, this candidate should appear in the results when I run the code... and he did (though he only received one vote)!
+
+* ![Strange Result](https://github.com/yaejinpark/election-analysis/blob/main/resources/ex1results.png)
+
+### Example 2 - More Candidates, More Votes
+What if example 1 worked just because the new challenger only had one vote? I made more changes to the CSV file so that the new challenger has more votes (repeating voter id indictes election fraud, but let's ignore that for now). This time, the new candidate got a significant amount of votes to alter the percentage of the votes each candidate received.
 
 
 
